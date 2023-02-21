@@ -1,0 +1,284 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgb(233, 107, 107);
+}
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.container {
+  width: 100%;
+}
+
+.login-box-outer {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.login-box-inner {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 28rem;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.signin {
+  margin-top: 1.5rem;
+  color: #111827;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  text-align: center;
+}
+
+.signin-form {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+.signin-form-input {
+  margin-top: -1px;
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.signin-form-input:focus {
+  border-radius: 0.375rem;
+  border-width: 1px;
+  border-color: transparent;
+}
+.signin-form-input > div {
+  margin-bottom: 12px;
+}
+
+.signin-form-input-email {
+  position: relative;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  color: #111827;
+  color: #6b7280;
+  width: 100%;
+  border-radius: 0;
+  border-top-right-radius: 0.375rem;
+  border-top-left-radius: 0.375rem;
+  border-width: 1px;
+  border-color: #d1d5db;
+  appearance: none;
+}
+.signin-form-input-password {
+  position: relative;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  color: #111827;
+  color: #6b7280;
+  width: 100%;
+  border-radius: 0;
+  border-bottom-right-radius: 0.375rem;
+  border-bottom-left-radius: 0.375rem;
+  border-width: 1px;
+  border-color: #d1d5db;
+  appearance: none;
+}
+.signin-form-submit {
+  display: flex;
+  position: relative;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  background-color: #4338ca;
+
+  justify-content: center;
+  width: 100%;
+  border-radius: 0.375rem;
+  border-width: 1px;
+  border-color: transparent;
+  box-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width))
+    var(--tw-ring-color);
+  --ring-color: #6366f1;
+  --ring-offset-width: 2px;
+  box-shadow: 0 0 0 var(--ring-offset-width) var(--ring-offset-color),
+    var(--ring-shadow);
+  outline: 0;
+}
+.signin-form-submit > button {
+  width: 100%;
+  background-color: #4338ca;
+  border-radius: 0.375rem;
+  border-width: 1px;
+  border-color: transparent;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.signin-form-create-account {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: space-between;
+}
+.signin-form-create-account > button {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  color: #ffffff;
+  background-color: #d97706;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+  width: 66.666667%;
+  border-radius: 0.5rem;
+}
+
+.signin-form-create-account > button:hover {
+  background-color: rgb(255, 162, 0);
+}
+.signin-form-create-account > span {
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+.modal-create-account {
+  display: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 50;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  /* Need to fix for responsive design */
+}
+
+.modal-create-outer-box {
+  position: relative;
+  width: 100%;
+  max-width: 28rem;
+}
+
+.modal-create-inner-box {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+.modal-create-close-button {
+  display: inline-flex;
+  position: absolute;
+  right: 0.625rem;
+  top: 0.75rem;
+  padding: 0.375rem;
+  margin-left: auto;
+  background-color: transparent;
+  color: #9ca3af;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+.modal-create-close-button:hover {
+  background-color: #e5e7eb;
+  color: #111827;
+}
+.modal-create-close-button > svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.modal-create-form-outer-box {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.modal-create-form-outer-box > h3 {
+  margin-bottom: 1rem;
+  color: #111827;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+}
+.modal-create-form-outer-box > form > div {
+  margin-top: 1.5rem;
+}
+
+.modal-create-form-outer-box > form > div > label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #111827;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}
+
+.modal-create-form-outer-box > form > div > input {
+  display: block;
+  padding: 0.625rem;
+  background-color: #f9fafb;
+  color: #111827;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  border-color: #d1d5db;
+}
+.modal-create-form-outer-box > form > div > input:focus {
+  border-color: #3b82f6;
+  --ring-color: #3b82f6;
+}
+
+.modal-create-form-outer-box > form > div > button {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  background-color: #1d4ed8;
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.modal-create-form-outer-box > form > div > button:hover {
+  background-color: #1049e5;
+}
+
+.modal-create-form-outer-box > form > div > button:focus {
+  box-shadow: var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width))
+    var(--tw-ring-color);
+  --ring-color: #93c5fd;
+  outline: 0;
+}

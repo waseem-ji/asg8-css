@@ -13,8 +13,6 @@ $routes = [
     "/forms" => base_path("controllers/form-handle.php"),
     "/settings" => base_path("controllers/user-registration.php"),
     "/delete" => base_path("controllers/delete.php")
-
-
 ];
 
 

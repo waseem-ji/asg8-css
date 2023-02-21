@@ -23,12 +23,14 @@
                 <div class="ml-4 flex items-center md:ml-6">
                 <p class="text-white"> <?= $username ?></p>
                     <!-- Profile image-->
+                    <?php if (isset($user_profile_pic)): ?>
                     <div class="relative ml-3">
                         
                         <div>
                             <img class="h-8 w-8 rounded-full" src="../uploads/<?=$user_profile_pic?>" alt="">
                         </div>
                     </div>
+                    <?php endif ?>
                 </div>
             </div>
 </nav>
