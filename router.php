@@ -3,7 +3,7 @@
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 $routes = [
     "/" => base_path("controllers/index.php"),
-    "/sample" => base_path("sample.php"),
+    
     "/login" => base_path("controllers/login.php"),
     "/logout" => base_path("controllers/logout.php"),
     "/dashboard" => base_path("controllers/dashboard.php"),
@@ -12,7 +12,9 @@ $routes = [
     "/update-post" => base_path("controllers/update-post.php"),
     "/forms" => base_path("controllers/form-handle.php"),
     "/settings" => base_path("controllers/user-registration.php"),
-    "/delete" => base_path("controllers/delete.php")
+    "/delete" => base_path("controllers/delete.php"),
+    "/tag" => base_path("controllers/tags.php")
+
 ];
 
 

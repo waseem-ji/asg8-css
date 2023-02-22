@@ -26,13 +26,13 @@
 
 
         <div class="signin-form-submit">
-          <button type="submit" name="submit" >
+          <button type="submit" name="login" >
             Sign in
           </button>
         </div>
         <div class="signin-form-create-account">
           <span >New to mySocial ?</span>
-          <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" onclick=showModal() type="button">
+          <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" type="button">
             Create Account
           </button>
         </div>
@@ -61,6 +61,14 @@
                 <h3 >Create a New Account</h3>
                 <form  action="/login" method="post">
                     <div>
+                        <label for="firstname" >First name</label>
+                        <input type="firstname" name="firstname" id="firstname"   required>
+                    </div>
+                    <div>
+                        <label for="lastname" >Last name</label>
+                        <input type="lastname" name="lastname" id="lastname"   required>
+                    </div>
+                    <div>
                         <label for="email" >Your email</label>
                         <input type="email" name="email" id="email"   required>
                     </div>
@@ -68,13 +76,10 @@
                         <label for="password" >Your password</label>
                         <input type="password" name="password" id="password"   required>
                     </div>
-                    <!-- <div>
-                        <label for="password" >Please Renter Your password</label>
-                        <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 " required>
-                    </div> -->
+                    
                    <div >
 
-                     <button type="submit" name="submit">Login to your account</button>
+                     <button type="submit" name="submit">Create to your account</button>
                      
 
                    </div>

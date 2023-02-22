@@ -151,6 +151,10 @@ function inputToPosts($data)
  //----------------------------------   Fn to Delete post dataa  -----------------------
  function deletePost($id) {
     $conn = dbconnect();
+    $get_image = "SELECT image FROM posts  where id=$id";
+    // mysqli_query($conn,$get_image);
+    $image = mysqli_fetch_column(mysqli_query($conn,$get_image));
+    unlink("uploads/$image");
     $sql = "DELETE FROM posts WHERE id=$id";
     mysqli_query($conn,$sql);
 }
@@ -175,6 +179,8 @@ function updateImage($img_path,$id) {
     $conn = dbconnect();
     $sql = "UPDATE posts SET image='$img_path' WHERE id=$id";
     mysqli_query($conn,$sql);
+    // dd($img_path);
+    
 }
 
 //  --------------------- FN TO Up oad images to post database ----------------------------
@@ -186,7 +192,7 @@ function updateProfileImage($img_path,$id) {
     mysqli_query($conn,$sql);
 }
 
-//  --------------------- FN TO Up oad PRofile images to post database ----------------------------
+//  --------------------- END FN TO Up oad PRofile images to post database ----------------------------
 
 
 //  --------------------- FN TO form image proccessing ----------------------------
@@ -201,7 +207,7 @@ function formImageProccess($image,$id) {
     if($error === 0) {
         if ($img_size > 1250000) {
             $em = "Sorry Your image is too large";
-            dd($em);
+            // dd($em);
             // header("Location: index.php?error=$em")
             header("Location: /profile");
         }
@@ -218,13 +224,15 @@ function formImageProccess($image,$id) {
                 // INSERT INTO DATABASE
 
                 updateImage($new_img_name,$id);
-                header("Location: /profile");
+                // header("Location: /profile");
+
+                return $new_img_name;
 
 
             }
             else {
                 $em="You Cant upload files of this type";
-                dd($em);
+                // dd($em);
                 header("Location: index.php?error=$em");
 
             }
@@ -233,6 +241,7 @@ function formImageProccess($image,$id) {
     }
     else {
         $em = "Some unknown error occurred";
+        // dd($em);
         header("Location: /profile");
     }
     
@@ -325,12 +334,20 @@ function updateUsers($table, $data, $where)
 
  function updateEmailAndPassword($email,$password,$id) {
     $conn = dbconnect();
-    $sql = "UPDATE users SET email='$email' , password='$password' WHERE id=$id;";
+    $securePass = encryptPassword($password);
+    $sql = "UPDATE users SET email='$email' , password='$securePass' WHERE id=$id;";
     mysqli_query($conn,$sql);
  }
  //----------------------------------  END of Fn to update email and passsword -----------------------
 
  
+// Create function to encrpt password
+// function encryptPassword($password) 
+// {
+//     return password_hash($password, PASSWORD_BCRYPT);
+     
+// }
+
 
 function listTags($tag_id=NULL) {
     $conn = dbconnect();

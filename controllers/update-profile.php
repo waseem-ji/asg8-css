@@ -6,7 +6,8 @@ $user_id = getUserId();
 
 if (isset($_POST["update"])){
     $email = $_POST["email"];
-    $password = md5($_POST["password"]);
+    $password = $_POST["password"]; //bcrypt updated password
+    // $passwordConfirm = $_POST['password_confirm'];
     updateEmailAndPassword($email,$password,$user_id);
 }
 else {

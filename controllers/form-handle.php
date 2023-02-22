@@ -5,7 +5,7 @@ $conn = dbconnect();
 $title = mysqli_real_escape_string($conn,$_POST['title']) ;
 $description =  mysqli_real_escape_string($conn,$_POST['description']);
 $tag = mysqli_real_escape_string($conn,$_POST['tag']);
-$image = $_POST['image'] ?? '' ;
+$image = $_FILES['image'] ?? '' ;
 $user_id = getUserId();
 $tag_id = inputToTag($tag);
 
@@ -13,7 +13,7 @@ $input_array = array(
     'title' =>$title,
     'description'=>$description,
     'tag'=>$tag_id,
-    'image'=>$image,
+    // 'image'=>$image,
     'user_id'=>$user_id
 );
 
@@ -42,20 +42,34 @@ $input_array = array(
 
 if ($_POST['_method']=== "UPDATE") {
     $id= $_GET['id'];
-    if (isset ($_FILES['image'])) {
-        formImageProccess($_FILES['image'],$id);
+    if ((isset($_FILES['image']) && (strlen($_FILES['image']['name']) !== 0))) {
+
+      
+        $new_image = formImageProccess($_FILES['image'],$id);
+        
+        $input_array += ['image' => $new_image];
+        // $input_array['image'] = 
+        updatePost($input_array,$id);
+        
+        header("location: /profile");
+        die();
 
     
     }
     else {
         // No image is givin
         updatePost($input_array,$id);
+        // dd($input_array);
+        header("location: /profile");
+die();
     }
 }
 else {
     if( isset($_FILES['image'])) {
         $id = inputToPosts($input_array);
         formImageProccess($_FILES['image'],$id);
+        header("location: /profile");
+die();
 
         
     }

@@ -1,0 +1,56 @@
+.about-main-wrapper {
+  padding: 0.75rem;
+  padding-bottom: 1.25rem;
+  background-color: #ffffff;
+  border-radius: 0.125rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  width: 92.5%;
+}
+
+.about-head {
+  display: flex;
+  margin-left: 0.5rem;
+  color: #111827;
+  font-weight: 600;
+  line-height: 2rem;
+  align-items: center;
+}
+
+.about-head > span > svg {
+  height: 1.25rem;
+}
+.about-wrapper {
+  color: #374151;
+}
+
+.about-box {
+  display: grid;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.about-info-module {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.about-label {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-weight: 600;
+}
+
+.about-info {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media screen and (min-width: 770px) {
+  .about-box {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

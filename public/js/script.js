@@ -17,3 +17,19 @@ container.addEventListener('click', function(){
       container.style.display = "none";
       }
 })
+
+
+
+// function loadEditModal(id){
+//       var dropDown = document.getElementById('dropdownMenuIconHorizontalButton_'+id);
+
+//       dropDown.addEventListener('click', function(){
+//             if (dropDown.style.display == "none")
+//             {
+//             dropDown.style.display = "block";
+//                 } else {
+//             dropDown.style.display = "none";
+//           }
+
+//       })
+// }

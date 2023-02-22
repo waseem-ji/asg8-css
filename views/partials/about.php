@@ -1,42 +1,42 @@
 <?php
 foreach ($users as $user) : ?>
-    <div class="bg-white p-3 shadow-sm rounded-sm pb-5">
-        <div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8">
-            <span clas="text-green-500">
-                <svg class="h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <div class="about-main-wrapper">
+        <div class="about-head">
+            <span>
+                <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
             </span>
-            <span class="tracking-wide">About</span>
+            <span>About</span>
         </div>
-        <div class="text-gray-700">
-            <div class="grid md:grid-cols-2 text-sm">
-                <div class="grid grid-cols-2">
-                    <div class="px-4 py-2 font-semibold">First Name</div>
-                    <div class="px-4 py-2"><?= $user['firstname'] ?></div>
+        <div class="wrapper">
+            <div class="about-box">
+                <div class="about-info-module">
+                    <div class="about-label">First Name</div>
+                    <div class="about-info"><?= $user['firstname'] ?></div>
                 </div>
-                <div class="grid grid-cols-2">
-                    <div class="px-4 py-2 font-semibold">Last Name</div>
-                    <div class="px-4 py-2"><?= $user['lastname'] ?></div>
+                <div class="about-info-module">
+                    <div class="about-label">Last Name</div>
+                    <div class="about-info"><?= $user['lastname'] ?></div>
                 </div>
-                <div class="grid grid-cols-2">
-                    <div class="px-4 py-2 font-semibold">Gender</div>
-                    <div class="px-4 py-2"><?= $user['gender'] ?></div>
+                <div class="about-info-module">
+                    <div class="about-label">Gender</div>
+                    <div class="about-info"><?= $user['gender'] ?></div>
                 </div>
-                <div class="grid grid-cols-2">
-                    <div class="px-4 py-2 font-semibold">Contact No.</div>
-                    <div class="px-4 py-2"><?= $user['phone'] ?></div>
+                <div class="about-info-module">
+                    <div class="about-label">Contact No.</div>
+                    <div class="about-info"><?= $user['phone'] ?></div>
                 </div>
 
-                <div class="grid grid-cols-2">
-                    <div class="px-4 py-2 font-semibold">Email.</div>
-                    <div class="px-4 py-2">
+                <div class="about-info-module">
+                    <div class="about-label">Email.</div>
+                    <div class="about-info">
                         <a class="text-blue-800" href="mailto:jane@example.com"><?= $user['email'] ?></a>
                     </div>
                 </div>
-                <div class="grid grid-cols-2">
-                    <div class="px-4 py-2 font-semibold">Birthday</div>
-                    <div class="px-4 py-2"><?= $user['dob'] ?></div>
+                <div class="about-info-module">
+                    <div class="about-label">Birthday</div>
+                    <div class="about-info"><?= $user['dob'] ?></div>
                 </div>
             </div>
         </div>

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mySocial - <?= $heading ?></title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" /> -->
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -17,6 +17,9 @@
         }
     </script> -->
     <link rel="stylesheet" href="css/login-styles.css">
+    <link rel="stylesheet" href="css/dash-styles.css">
+    <link rel="stylesheet" href="css/about-styles.css">
+    <link rel="stylesheet" href="css/registration-styles.css">
     <script src="js/script.js"></script>
 </head>
 
